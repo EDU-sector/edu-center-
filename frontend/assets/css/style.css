@@ -315,7 +315,6 @@ main {
 .sector-card p,
 .institution-card p,
 .compare-card p,
-.assistant-copy p,
 .faq-list p,
 .suggest-form label,
 .form-status {
@@ -386,49 +385,6 @@ main {
 
 .compare-card h3 {
   margin-top: 0;
-}
-
-.assistant-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 22px;
-  align-items: center;
-}
-
-.assistant-box {
-  background: linear-gradient(180deg, #f8fbff, #eef5ff);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 18px;
-  display: grid;
-  gap: 12px;
-}
-
-.message {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 12px;
-}
-
-.message.incoming {
-  background: white;
-  border: 1px solid var(--line);
-}
-
-.message.outgoing {
-  background: #dfefff;
-  border: 1px solid rgba(37, 93, 206, 0.16);
-  margin-left: 30px;
-}
-
-.dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--primary);
 }
 
 .faq-list {
@@ -509,8 +465,7 @@ footer {
     position: static;
   }
 
-  .hero,
-  .assistant-panel {
+  .hero {
     grid-template-columns: 1fr;
   }
 }
