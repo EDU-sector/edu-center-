@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EduTricity helps students discover and compare educational institutions across Chandigarh, Mohali and Panchkula."
+    />
+    <title>EduTricity | Education Discovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="EduTricity home">EduTricity</a>
+
+      <form id="search-form" class="search" role="search">
+        <label class="sr-only" for="search-input">Search institutions</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search schools, colleges, courses..."
+          aria-label="Search institutions"
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <nav aria-label="Main navigation">
+        <a href="#compare">Compare</a>
+        <a href="#insights">Insights</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#suggest">Suggest</a>
+      </nav>
+    </header>
+
+    <div class="layout" id="top">
+      <aside class="sidebar" aria-label="Sidebar navigation">
+        <div>
+          <p class="eyebrow">Explore</p>
+          <h2>Quick links</h2>
+        </div>
+
+        <a href="#popular">Top institutions</a>
+        <a href="#sectors">Education sectors</a>
+        <a href="#compare">Compare schools</a>
+        <a href="#assistant">AI assistant</a>
+        <a href="#faqs">Support</a>
+      </aside>
+
+      <main>
+        <section class="hero panel">
+          <div class="hero-copy">
+            <p class="eyebrow">EDUCATION DISCOVERY PLATFORM</p>
+            <h1>Find the right educational path for every stage of learning.</h1>
+            <p>
+              Discover schools, colleges, private institutions, coaching centres and
+              skill-development programmes across Chandigarh, Mohali and Panchkula.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-btn" href="#popular">Explore institutions</a>
+              <a class="secondary-btn" href="#assistant">Try AI guide</a>
+            </div>
+
+            <div class="location-tags" aria-label="Supported regions">
+              <span>Chandigarh</span>
+              <span>Mohali</span>
+              <span>Panchkula</span>
+            </div>
+          </div>
+
+          <div class="hero-metrics" aria-label="Platform metrics">
+            <div>
+              <strong>220+</strong>
+              <span>Institutions tracked</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Education sectors</span>
+            </div>
+            <div>
+              <strong>4.9/5</strong>
+              <span>Student trust score</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="sectors" class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Browse by type</p>
+              <h2>Explore education sectors</h2>
+            </div>
+          </div>
+
+          <div class="grid sectors-grid">
+            <article class="sector-card">
+              <span aria-hidden="true">🏫</span>
+              <h3>Schools</h3>
+              <p>Class XI and XII, international, and foundational learning.</p>
+            </article>
+            <article class="sector-card">
+              <span aria-hidden="true">🎓</span>
+              <h3>Colleges</h3>
+              <p>Degree courses, affiliated colleges and professional training.</p>
+            </article>
+            <article class="sector-card">
+              <span aria-hidden="true">📚</span>
+              <h3>Coaching</h3>
+              <p>Academic support, entrance prep, and mentoring centres.</p>
+            </article>
+            <article class="sector-card">
+              <span aria-hidden="true">💻</span>
+              <h3>Skill development</h3>
+              <p>Vocational programmes and career-focused skill learning.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="popular" class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Popular choices</p>
+              <h2>Featured institutions</h2>
+            </div>
+          </div>
+
+          <div id="results" class="institution-grid" aria-live="polite">
+            <article class="institution-card" data-name="Chandigarh university" data-location="chandigarh">
+              <div class="badge success">Top rated</div>
+              <h3>Chandigarh University</h3>
+              <p class="meta">University · Chandigarh</p>
+              <p>Strong engineering, management and innovation programmes.</p>
+              <ul>
+                <li>UG / PG courses</li>
+                <li>Campus placement support</li>
+              </ul>
+            </article>
+
+            <article class="institution-card" data-name="Government college for girls" data-location="chandigarh">
+              <div class="badge neutral">Public</div>
+              <h3>Government College for Girls</h3>
+              <p class="meta">College · Chandigarh</p>
+              <p>Affordable higher education with strong academic reputation.</p>
+              <ul>
+                <li>Arts and science</li>
+                <li>Scholarship support</li>
+              </ul>
+            </article>
+
+            <article class="institution-card" data-name="Apeejay school" data-location="mohali">
+              <div class="badge success">Popular</div>
+              <h3>Apeejay School</h3>
+              <p class="meta">School · Mohali</p>
+              <p>Academic focus with co-curricular learning and leadership options.</p>
+              <ul>
+                <li>CBSE curriculum</li>
+                <li>Sports and arts</li>
+              </ul>
+            </article>
+
+            <article class="institution-card" data-name="Target coaching centre" data-location="panchkula">
+              <div class="badge accent">Coaching</div>
+              <h3>Target Coaching Centre</h3>
+              <p class="meta">Coaching · Panchkula</p>
+              <p>Focused entrance preparation and personalised mentoring.</p>
+              <ul>
+                <li>JEE / NEET prep</li>
+                <li>Test series</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="compare" class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Decision support</p>
+              <h2>Compare institutions</h2>
+            </div>
+          </div>
+
+          <div class="compare-grid">
+            <div class="compare-card">
+              <h3>Academic focus</h3>
+              <p><strong>Chandigarh University</strong> · Technology and research courses</p>
+              <p><strong>Government College</strong> · Core degree and arts programmes</p>
+            </div>
+            <div class="compare-card">
+              <h3>Cost profile</h3>
+              <p>Private universities offer premium programmes with wider options.</p>
+              <p>Government colleges remain highly affordable for most students.</p>
+            </div>
+            <div class="compare-card">
+              <h3>Best fit</h3>
+              <p>Students seeking campus experience often prefer universities.</p>
+              <p>Budget-conscious learners often prefer public institutions.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="assistant" class="panel assistant-panel">
+          <div class="assistant-copy">
+            <p class="eyebrow">AI guidance</p>
+            <h2>Ask the EduTricity assistant</h2>
+            <p>
+              Get evidence-based recommendations using verified institution data and
+              approved academic information.
+            </p>
+          </div>
+
+          <div class="assistant-box">
+            <div class="message incoming">
+              <span class="dot"></span>
+              <p>Which institutions are good for engineering in Chandigarh?</p>
+            </div>
+            <div class="message outgoing">
+              <p>
+                Based on your filters, university programmes and private engineering
+                colleges are best suited for strong placement outcomes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="faqs" class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Need help?</p>
+              <h2>Frequently asked questions</h2>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>What is EduTricity?</summary>
+              <p>EduTricity is a discovery and comparison platform for educational institutions.</p>
+            </details>
+            <details>
+              <summary>Which cities does it cover?</summary>
+              <p>Currently, the project focuses on Chandigarh, Mohali and Panchkula.</p>
+            </details>
+            <details>
+              <summary>Does it include AI recommendations?</summary>
+              <p>Yes. The long-term plan includes evidence-backed AI answers using verified data.</p>
+            </details>
+            <details>
+              <summary>Can I suggest an institution?</summary>
+              <p>Yes. Use the suggestion form below to share updates or missing entries.</p>
+            </details>
+          </div>
+        </section>
+
+        <section id="suggest" class="panel suggest-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Improve the directory</p>
+              <h2>Suggest an institution</h2>
+            </div>
+          </div>
+
+          <form id="suggest-form" class="suggest-form">
+            <div class="field-row">
+              <label>
+                Institution name
+                <input type="text" name="institution" placeholder="Enter institution name" required />
+              </label>
+              <label>
+                Location
+                <input type="text" name="location" placeholder="Chandigarh, Mohali, Panchkula" required />
+              </label>
+            </div>
+
+            <label>
+              Details
+              <textarea name="details" rows="4" placeholder="Share the type of institution, courses, or other useful information"></textarea>
+            </label>
+
+            <button type="submit" class="primary-btn">Submit suggestion</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>EduTricity · Education discovery for Chandigarh, Mohali and Panchkula</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

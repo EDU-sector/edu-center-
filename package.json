@@ -1,0 +1,12 @@
+{
+  "name": "edutricity",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Education discovery and AI-powered institution comparison platform",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory frontend",
+    "dev": "python3 -m http.server 8000 --directory frontend",
+    "build": "node -e \"console.log('Static site build complete.');\"",
+    "test": "node -e \"console.log('No automated tests configured yet.'); process.exit(0);\""
+  }
+}
