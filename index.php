@@ -1,5 +1,9 @@
 <?php
 require_once __DIR__ . '/config/database.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/footer.php';
+
+$dbError = null;
 
 try {
     $pdo = getDbConnection();
@@ -10,7 +14,7 @@ try {
 
 $searchTerm = trim($_GET['q'] ?? '');
 
-if (!isset($dbError)) {
+if ($dbError === null) {
     $query = "
         SELECT i.id, i.name, i.ownership, i.description, i.fee_range, i.website,
                l.city, c.name AS category_name
@@ -104,7 +108,7 @@ renderHeader('EduTricity | Education Discovery');
                 </div>
             </div>
 
-            <?php if (isset($dbError)): ?>
+            <?php if ($dbError !== null): ?>
                 <p class="error-message">Database connection failed: <?= htmlspecialchars($dbError, ENT_QUOTES, 'UTF-8'); ?></p>
             <?php else: ?>
                 <div class="institution-grid">
