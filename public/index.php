@@ -39,52 +39,47 @@ if ($dbError === null) {
 renderHeader('EduTricity | Education Discovery');
 ?>
 
-<div class="layout" id="top">
+<div class="workspace-shell">
     <aside class="sidebar">
-        <div>
-            <p class="eyebrow">Explore</p>
-            <h2>Quick links</h2>
+        <div class="sidebar-box">
+            <p class="eyebrow">info</p>
+            <a href="#top">top site / institutions</a>
+            <a href="#popular">most popular</a>
+            <a href="#suggest">Suggest an Institution</a>
+            <a href="#faqs">contact us / faqs</a>
+            <a href="#about">info about us</a>
         </div>
-        <a href="#popular">Top institutions</a>
-        <a href="#sectors">Education sectors</a>
-        <a href="#compare">Compare schools</a>
-        <a href="#faqs">Support</a>
     </aside>
 
-    <main>
-        <section class="hero panel">
-            <div class="hero-copy">
-                <p class="eyebrow">EDUCATION DISCOVERY PLATFORM</p>
-                <h1>Find the right educational path for every stage of learning.</h1>
-                <p>Discover schools, colleges, private institutions, coaching centres and skill-development programmes across Chandigarh, Mohali and Panchkula.</p>
-                <div class="hero-actions">
-                    <a class="primary-btn" href="#popular">Explore institutions</a>
-                    <a class="secondary-btn" href="#compare">Compare options</a>
-                </div>
-                <div class="location-tags">
-                    <span>Chandigarh</span>
-                    <span>Mohali</span>
-                    <span>Panchkula</span>
+    <main class="workspace-main">
+        <section class="hero panel board-panel">
+            <div class="hero-topline">
+                <span class="mini-tag">search bar</span>
+                <span class="mini-tag offset-right">sign in</span>
+            </div>
+
+            <div class="hero-primary-row">
+                <div class="hero-search-wrap">
+                    <label>education sector</label>
+                    <div class="search-box">Chandigarh</div>
                 </div>
             </div>
 
-            <div class="hero-metrics">
-                <div>
-                    <strong>220+</strong>
-                    <span>Institutions tracked</span>
+            <div class="hero-meta-row">
+                <div class="panel soft-panel mini-panel">
+                    <span class="caption">private</span>
+                    <span class="caption">tier 1</span>
+                    <span class="caption">near you</span>
                 </div>
-                <div>
-                    <strong>12</strong>
-                    <span>Education sectors</span>
-                </div>
-                <div>
-                    <strong>4.9/5</strong>
-                    <span>Student trust score</span>
+                <div class="panel soft-panel mini-panel">
+                    <span class="caption">govt</span>
+                    <span class="caption">tier 2</span>
+                    <span class="caption">map location</span>
                 </div>
             </div>
         </section>
 
-        <section id="sectors" class="panel">
+        <section id="sectors" class="panel board-panel compact-panel">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">Browse by type</p>
@@ -100,7 +95,7 @@ renderHeader('EduTricity | Education Discovery');
             </div>
         </section>
 
-        <section id="popular" class="panel">
+        <section id="popular" class="panel board-panel">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">Popular choices</p>
@@ -128,7 +123,7 @@ renderHeader('EduTricity | Education Discovery');
             <?php endif; ?>
         </section>
 
-        <section id="compare" class="panel">
+        <section id="compare" class="panel board-panel">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">Decision support</p>
@@ -155,7 +150,7 @@ renderHeader('EduTricity | Education Discovery');
             </div>
         </section>
 
-        <section id="faqs" class="panel">
+        <section id="faqs" class="panel board-panel">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">Need help?</p>
@@ -179,7 +174,7 @@ renderHeader('EduTricity | Education Discovery');
             </div>
         </section>
 
-        <section id="suggest" class="panel suggest-panel">
+        <section id="suggest" class="panel board-panel suggest-panel">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">Improve the directory</p>
