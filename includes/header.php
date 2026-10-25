@@ -14,22 +14,28 @@ function renderHeader(string $title = 'EduTricity'): void
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <header class="topbar topbar-compact">
+        <header class="topbar">
             <div class="topbar-inner">
                 <div class="brand-wrap">
-                    <span class="brand-mark">info</span>
+                    <span class="brand-mark">EDU</span>
                     <a class="brand" href="index.php">EduTricity</a>
                 </div>
 
-                <form class="search search-compact" method="get" action="index.php">
+                <form class="search" method="get" action="index.php">
                     <label class="sr-only" for="q">Search institutions</label>
                     <input id="q" type="search" name="q" value="<?= htmlspecialchars($_GET['q'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="Search schools, colleges, courses...">
                     <button type="submit">Search</button>
                 </form>
 
-                <button type="button" class="ghost-btn">Sign in</button>
+                <div class="header-actions">
+                    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </button>
+                    <button type="button" class="ghost-btn">Sign in</button>
+                </div>
             </div>
         </header>
+        <script src="assets/js/app.js"></script>
     <?php
 }
 
