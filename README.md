@@ -1,70 +1,67 @@
 # EduTricity 🎓
 
-**Education Discovery and Intelligence Platform**
+**Education Discovery and Comparison Platform**
 
 EduTricity is a collaborative project to help students discover, explore, and compare educational institutions across Chandigarh, Mohali (SAS Nagar), and Panchkula.
 
-## 🎯 Objectives
+## Objectives
 
 - Discover schools, colleges, universities, coaching institutes, and skill-development institutes.
-- Search and filter institutions by location, education sector, and ownership.
-- Compare institutions using available course, fee, eligibility, and facility information.
-- Explore institutions through map-based discovery.
-- Build an AI education assistant that provides evidence-based answers using current data.
-- Keep institution information updateable without retraining the language model.
+- Search and filter institutions by location and category.
+- Compare institutions using available course, fee, and general institutional information.
+- Explore institutions through a clean, searchable landing page.
+- Allow users to suggest missing institutions.
 
-## ✨ Planned Features
-
-- Education-sector homepage and search bar
-- Institution listings and detailed profiles
-- Private, government, and affiliated college categories
-- Institution comparison
-- Nearby institution and map search
-- Institution suggestion form and FAQs
-- AI-powered conversational education assistant
-- Retrieval from official admission documents
-
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Component | Technology |
 |---|---|
 | Frontend | HTML, CSS, JavaScript |
-| Existing backend | PHP |
+| Backend | PHP |
 | Database | MySQL |
-| AI service | Python, FastAPI |
-| Local model runtime | Ollama |
-| Initial model candidate | Qwen3 4B |
-| Document retrieval (planned) | ChromaDB, Sentence Transformers |
+| Rendering model | DOM-based server-rendered pages |
 | Collaboration | Git and GitHub |
 
-The final implementation will be confirmed after auditing the existing codebase and database.
+## Architecture
 
-## 🏗️ Architecture
+The project uses a straightforward PHP + MySQL architecture:
 
-The frontend communicates with backend APIs. PHP handles existing website functionality, while a separate Python service handles AI conversations and approved search tools. MySQL remains the source of truth for structured institution data.
+- PHP handles page rendering and backend logic.
+- MySQL stores institutions, categories, locations, and suggestions.
+- HTML + CSS render the user interface.
+- JavaScript adds lightweight frontend interactivity.
 
-AI-generated factual answers must be grounded in retrieved records or relevant official documents.
+See [`docs/architecture.md`](docs/architecture.md) for the full architecture overview.
 
-See [`docs/architecture.md`](docs/architecture.md) for the detailed design.
+## Project Structure
 
-## 📍 Initial Scope
+```text
+project/
+├── config/
+│   └── database.php
+├── database/
+│   └── schema.sql
+├── includes/
+│   ├── header.php
+│   └── footer.php
+├── assets/
+│   ├── css/
+│   └── js/
+├── index.php
+├── process-suggestion.php
+├── README.md
+├── docs/
+│   └── architecture.md
+└── .gitignore
+```
 
-The first release focuses on Chandigarh, Mohali, and Panchkula.
+## Current Status
 
-## 👥 Team Collaboration
+The project is currently focused on:
+- institution discovery
+- institutional search/filtering
+- PHP + MySQL-backed data flow
+- suggestion submission handling
+- comparison-focused landing page experience
 
-- GitHub Issues track tasks and bugs.
-- Feature branches isolate development work.
-- Pull requests are reviewed before merging.
-- The `main` branch should remain stable.
-- Secrets, credentials, and private data must never be committed.
-
-## 🚧 Project Status
-
-**Current phase:** Repository setup, architecture documentation, and existing-application audit.
-
-Features listed above are planned unless explicitly marked as implemented.
-
-## 📄 License
-
-To be decided before public release.
+This project does not include a chatbot or AI service in the current stack.
