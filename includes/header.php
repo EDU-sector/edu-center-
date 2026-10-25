@@ -27,6 +27,13 @@ function renderHeader(string $title = 'EduTricity'): void
                     <button type="submit">Search</button>
                 </form>
 
+                <nav class="topnav" aria-label="Main navigation">
+                    <a href="index.php#compare">Compare</a>
+                    <a href="index.php#popular">Institutions</a>
+                    <a href="index.php#faqs">FAQs</a>
+                    <a href="index.php#suggest">Suggest</a>
+                </nav>
+
                 <div class="header-actions">
                     <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
                         <span class="theme-toggle-icon">🌙</span>
@@ -36,16 +43,5 @@ function renderHeader(string $title = 'EduTricity'): void
             </div>
         </header>
         <script src="assets/js/app.js"></script>
-    <?php
-}
-
-function renderFooter(): void
-{
-    ?>
-        <footer>
-            <p>EduTricity · Education discovery for Chandigarh, Mohali and Panchkula</p>
-        </footer>
-    </body>
-    </html>
     <?php
 }
